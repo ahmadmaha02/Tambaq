@@ -53,7 +53,7 @@ var db *gorm.DB
 var r *gin.Engine
 
 func InitDB() error {
-	_db, err := gorm.Open(mysql.Open("root:spenesa234@tcp(127.0.0.1:3306)/intern_workshop?parseTime=true"), &gorm.Config{})
+	_db, err := gorm.Open(mysql.Open("root:@tcp(127.0.0.1:3306)/intern_workshop?parseTime=true"), &gorm.Config{})
 	if err != nil {
 		return err
 	}
