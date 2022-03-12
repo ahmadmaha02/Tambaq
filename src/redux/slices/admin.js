@@ -4,7 +4,7 @@ import {
   createEntityAdapter,
 } from "@reduxjs/toolkit";
 import { AdminAxios, Axios } from "../../api/instances";
-import * as Api from "../../api/endpoints";
+
 import { NotificationManager } from "react-notifications";
 import { history } from "../../utils";
 

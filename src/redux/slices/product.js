@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { Axios, UserAxios } from "../../api/instances";
-import * as Api from "../../api/endpoints";
+
 import { NotificationManager } from "react-notifications";
 import { history } from "../../utils";
 

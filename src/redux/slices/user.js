@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { Axios, UserAxios } from "../../api/instances";
-import * as Api from "../../api/endpoints";
+
 import { history } from "../../utils";
 import { NotificationManager } from "react-notifications";
 
@@ -15,7 +15,7 @@ const signup = createAsyncThunk(
   "users/signup",
   async ({ name, email, password }) => {
     try {
-      const res = await Axios.post(Api.USER_SIGNUP, {
+      const res = await Axios.post("/api/auth/register", {
         name,
         email,
         password,
@@ -30,10 +30,10 @@ const signup = createAsyncThunk(
 
 const login = createAsyncThunk("users/login", async ({ email, password }) => {
   try {
-    const res = await Axios.post(Api.USER_LOGIN, {
+    const res = await Axios.post("//api/auth/login",{
       email,
-      password,
-    });
+      password
+      })
     history.push("/");
     return res.data;
   } catch (error) {

@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { UserAxios } from "../../api/instances";
-import * as Api from "../../api/endpoints";
+
 import { history } from "../../utils";
 
 const initialState = {
